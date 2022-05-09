@@ -28,13 +28,13 @@ firebase init
 # Hostingだけ使う
 # 事前にgitリポジトリを作っておく
 # gitの設定で作っておいたリポジトリを指定する
-# publicの設定はviteのコンパイル先のdistにしておく？
+# publicの設定はviteのコンパイル先のdistにしておく
 
-# 以下はYesにして[npm run build]を入れる？
+# 以下はYesにしてデフォルト[npm ci && npm run build]でおｋ
 ? Set up the workflow to run a build script before every deploy? Yes
 ```
 
-### gitの設定
+### gitコミットしてデプロイされるところまで確認
 ```sh
 git init
 git add *
@@ -42,4 +42,7 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/orotyon/VueOnChartjs.git
 git push -u origin main
-
+```
+firebaseのコンソールにアクセスしてHostingからWebサイトを確認
+`Hello Vue 3 + Vite`
+が表示されていればOK
